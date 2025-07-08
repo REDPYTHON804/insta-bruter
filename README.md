@@ -22,7 +22,7 @@
 ## ⚙️ Usage
 
 ```bash
-python3 bruter.py \
+python3 instabrute.py \
   --url https://yourtarget.com/login \
   --username Target_user \
   --wordlist passwords.txt \
