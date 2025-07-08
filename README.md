@@ -24,7 +24,6 @@
 ```bash
 python3 bruter.py \
   --url https://yourtarget.com/login \
-  --username victim_user \
+  --username Target_user \
   --wordlist passwords.txt \
   --proxies proxy.txt \
-  --threads 10
