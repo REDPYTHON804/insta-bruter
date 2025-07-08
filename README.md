@@ -22,6 +22,12 @@
 ## ⚙️ Usage
 
 ```bash
+apt update -y
+apt upgrade -y
+apt install git
+apt install python3
+apt install python3-pip
+pip install -r requirements.txt
 python3 instabrute.py \
   --url https://yourtarget.com/login \
   --username Target_user \
