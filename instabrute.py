@@ -58,8 +58,7 @@ def fetch_proxies():
     try:
         url = "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt"
         r = requests.get(url)
-        proxy_list = r.text.strip().split("
-")  # Correct newline split
+        proxy_list = r.text.strip().split("/n")  # Correct newline split
         console.print(f"[cyan]Proxies loaded from GitHub: {len(proxy_list)}[/cyan]")
     except Exception as e:
         console.print(f"[red]Proxy fetch failed: {e}[/red]")
