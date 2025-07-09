@@ -30,8 +30,4 @@ apt install python3
 apt install python3-pip
 pip install -r requirements.txt
 
-python3 instabrute.py \
-  --url https://www.instagram.com/accounts/login/ \
-  --username Target_user \
-  --wordlist passwords.txt \
-  --proxies proxy.txt \
+python3 instabrute.py -h
